@@ -62,3 +62,5 @@ git remote add upstream <url>
 git fetch upstream
 git merge upstream/main
 
+NOTES:
+https://www.canva.com/design/DAGC4knGDyo/Yu-rtssFhmS3PYKLuztVzA/edit
