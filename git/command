@@ -1,1 +1,64 @@
+📁 Repository Setup
+bash
+Copy
+Edit
+git init                        # Initialize a local repo
+git clone <repo_url>           # Clone a remote repo
+📄 Staging and Committing
+bash
+Copy
+Edit
+git status                     # Show current changes
+git add <file>                 # Stage specific file
+git add .                      # Stage all changes
+git commit -m "Your message"  # Commit staged changes
+🔄 Pushing & Pulling
+bash
+Copy
+Edit
+git push                       # Push to default remote branch
+git push -u origin <branch>    # Push and set upstream
+git pull                       # Pull latest from default remote
+🌿 Branching
+bash
+Copy
+Edit
+git branch                     # List branches
+git branch <name>              # Create branch
+git checkout <branch>          # Switch to branch
+git checkout -b <branch>       # Create and switch
+git merge <branch>             # Merge into current branch
+🚮 Deleting Branches
+bash
+Copy
+Edit
+git branch -d <branch>         # Delete local branch
+git push origin --delete <branch>  # Delete remote branch
+🔍 Logs & History
+bash
+Copy
+Edit
+git log                        # Full commit history
+git log --oneline --graph      # Compact view with branches
+🧽 Undo & Reset
+bash
+Copy
+Edit
+git restore <file>             # Discard local file changes
+git reset HEAD <file>          # Unstage a staged file
+git reset --hard HEAD          # Discard all changes
+🌍 Remote Management
+bash
+Copy
+Edit
+git remote -v                  # Show remotes
+git remote add origin <url>    # Add new remote
+git remote remove origin       # Remove remote
+🔁 Sync Fork / Upstream
+bash
+Copy
+Edit
+git remote add upstream <url>
+git fetch upstream
+git merge upstream/main
 
