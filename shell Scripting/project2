@@ -1,0 +1,18 @@
+
+#Monitoring Free Disk space and sent an alert Email
+
+#import command
+#df-disk info
+
+
+# Set threshold (percentage of free space below which alert is triggered)
+THRESHOLD=20
+
+# Get current usage of root (/) partition in percentage
+USAGE=$(df / | tail -1 | awk '{print $5}' | sed 's/%//')
+
+# Compare current usage against the threshold
+if [ "$USAGE" -ge $((100 - THRESHOLD)) ]; then
+    echo "WARNING: Disk space low on / - Used: ${USAGE}%" \
+    | mail -s "Disk Space Alert on $(hostname)" sk@gmail.com
+fi
