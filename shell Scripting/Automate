@@ -1,0 +1,51 @@
+
+#Automate Our Script using At or Crontab
+
+#for only one time
+ sumit@Sumit:~$ chmod +x ~/script/01_basic.sh
+sumit@Sumit:~$ at 23:00 31 July 2025
+warning: commands will be executed using /bin/sh
+at Thu Jul 31 23:00:00 2025
+at> <EOT>
+job 2 at Thu Jul 31 23:00:00 2025
+sumit@Sumit:~$ atq
+2       Thu Jul 31 23:00:00 2025 a sumit
+
+
+#repeating tak
+ You're currently inside the crontab -e editor, which by default opens in nano (a text-based editor).
+
+You’ve correctly written your cron job:
+
+c
+Copy code
+0 23 31 7 * /home/sumit/script/01_basic.sh
+Now, you just need to save and exit.
+
+✅ How to Save and Exit in nano
+Press Ctrl + O to write (save) the file
+You'll see:
+
+pgsql
+Copy code
+File Name to Write: /tmp/crontab.XXXXX/crontab-new
+Press Enter to confirm
+
+Press Ctrl + X to exit the editor
+
+You’ll then see:
+
+bash
+Copy code
+crontab: installing new crontab
+This means your cron job is now scheduled.
+
+✅ To Confirm
+bash
+Copy code
+crontab -l
+It should show:
+
+bash
+Copy code
+0 23 31 7 * /home/sumit/script/01_basic.sh
