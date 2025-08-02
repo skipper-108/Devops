@@ -1,0 +1,4 @@
+for cron process we have to tick build periodically in build trigger for local jekins files
+
+for cron process we have to tick Poll SCM in build trigger for github files
+
